@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messagerie</title>
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('css/messagerie.css') }}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <script src="{{ asset('js/scriptchat.js') }}" defer></script>
+    <link rel="icon" href="{{ asset('images/logo1.png') }}">
+</head>
+<body>
+    <div class="container">
+        <nav class="nav1" >
+            <ul>
+                <li><a href="{{ path('app_your') }}" class="logo">
+                    <img src="{{ asset('svg/logo3.svg') }}">
+                    <span class="nav1-item">Espace Prof</span>
+                </a></li>
+                <li><a href="{{ path('planning') }}">
+                    <i class="fas fa-menorah"></i>
+                    <span class="nav1-item">Organiser</span>
+                </a></li>
+                <li><a href="{{ path('messagerie') }}">
+                    <i class="fas fa-comment"></i>
+                    <span class="nav1-item">Message</span>
+                </a></li>
+                <li><a href="{{ path('board') }}">
+                    <i class="fas fa-chart-bar"></i>
+                    <span class="nav1-item">Général</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="fas fa-cog"></i>
+                    <span class="nav1-item">Paramètres</span>
+                </a></li>
+
+                <li><a href="#" class="logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span class="nav1-item">Se déconnecter</span>
+                </a></li>
+            </ul>
+        </nav>
+
+        <div class="menu3">
+            <div class="header3">
+                <div class="navmobile">
+                    <a href="{{ path('planning') }}"><i class="fas fa-menorah"></i></a>
+                    <a href="{{ path('messagerie') }}"><i class="fas fa-comment"></i></a>
+                    <a href="{{ path('board') }}"><i class="fas fa-chart-bar"></i></a>
+                    <a><i class="fas fa-sign-out-alt"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <section class="main">
+            <div class="main-top">
+                <img src="{{ asset('svg/logo2.svg') }}" alt="logo" height="100px">
+                <i class="fas fa-user-cog"></i>
+            </div>
+            <div class="users">
+                <div class="card">
+                    <img src="{{ asset('img/david-annebicque.jpeg') }}">
+                    <h4>David ANNEBICQUE</h4>
+                    <p>Développement</p>
+                    <div class="per">
+                        <table>
+                            <tr>
+                                <td><span>60%</span></td>
+                                <td><span>40%</span></td>
+                            </tr>
+                            <tr>
+                                <td>Back</td>
+                                <td>Front</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button id="toggleChat" style="background-color: #f49719;">Message</button>
+                </div>
+                <script>
+                    const chatButton = document.getElementById("toggleChat");
+                    const chatbot = document.querySelector(".chatbot");
+
+                    chatButton.addEventListener("click", () => {
+                        document.body.classList.toggle("show-chatbot");
+                        chatbot.classList.toggle("show-chatbot");
+                    });
+                </script>
+
+               <div class="card">
+
+              <img src="{{ asset('img/Florent-LIBBRECHT.jpeg') }}">
+              <h4>Florent LIBBRECHT</h4>
+              <p>Dévellopement</p>
+              <div class="per">
+                <table>
+                  <tr>
+                    <td><span>65%</span></td>
+                    <td><span>35%</span></td>
+                  </tr>
+                  <tr>
+                    <td>DEV</td>
+                    <td>PPP</td>
+                  </tr>
+                </table>
+              </div>
+              <button>Message</button>
+            </div>
+
+            <div class="card">
+              <img src="{{ asset('img/Gilles-GROSDOIT-ARTUR.jpeg') }}">
+              <h4>Gilles GROSDOIT-ARTUR</h4>
+              <p>Anglais</p>
+              <div class="per">
+                <table>
+                  <tr>
+                    <td><span>90%</span></td>
+                    <td><span>10%</span></td>
+                  </tr>
+                  <tr>
+                    <td>Anglais</td>
+                    <td>Ergonomie</td>
+                  </tr>
+                </table>
+              </div>
+              <button>Message</button>
+            </div>
+
+            <div class="card">
+              <img src="{{ asset('img/Kylian-BRESSON.jpeg') }}">
+              <h4>KYLIAN BRESSON</h4>
+              <p>Audiovisuel</p>
+              <div class="per">
+                <table>
+                  <tr>
+                    <td><span>95%</span></td>
+                  </tr>
+                  <tr>
+                    <td>Prod. AudioVisuelle</td>
+                  </tr>
+                </table>
+              </div>
+              <button>Message</button>
+            </div>
+
+            <div class="card">
+                <img src="{{ asset('img/Fabrice-MEUZERET.jpeg') }}">
+                <h4>Fabrice MEUZERET</h4>
+                <p>Développement</p>
+                <div class="per">
+                    <table>
+                    <tr>
+                      <td><span>50%</span></td>
+                      <td><span>50%</span></td>
+                    </tr>
+                    <tr>
+                      <td>AudioV.</td>
+                      <td>DEV</td>
+                    </tr>
+                  </table>
+                </div>
+                <button>Message</button>
+              </div>
+
+              <div class="card">
+                <img src="{{ asset('img/M.A-HARAOUBIA.jpeg') }}">
+                <h4>M-A HARAOUBIA</h4>
+                <p>Développement</p>
+                <div class="per">
+                  <table>
+                    <tr>
+                      <td><span>50%</span></td>
+                      <td><span>50%</span></td>
+                    </tr>
+                    <tr>
+                      <td>Back</td>
+                      <td>Front</td>
+                    </tr>
+                  </table>
+                </div>
+                <button>Message</button>
+              </div>            
+              
+              <div class="card">
+                <img src="{{ asset('img/regis.jpeg') }}">
+                <h4>Régis HUEZ</h4>
+                <p>Développement</p>
+                <div class="per">
+                  <table>
+                    <tr>
+                      <td><span>40%</span></td>
+                      <td><span>60%</span></td>
+                    </tr>
+                    <tr>
+                      <td>DEV</td>
+                      <td>Maths</td>
+                    </tr>
+                  </table>
+                </div>
+                <button>Message</button>
+              </div>
+
+              <div class="card">
+                <img src="{{ asset('img/Guillaume-LEULLIER.jpeg') }}">
+                <h4>Guillaume LEULLIER</h4>
+                <p>ART graphisme</p>
+                <div class="per">
+                  <table>
+                    <tr>
+                      <td><span>95%</span></td>
+                    </tr>
+                    <tr>
+                      <td>Prod. graphique</td>
+                    </tr>
+                  </table>
+                </div>
+                <button>Message</button>
+              </div>
+
+              <div class="card">
+                <img src="{{ asset('img/olivier.jpeg') }}">
+                <h4>Olivier CHÉRAIN</h4>
+                <p>Projet Personnel et Professionnel</p>
+                <div class="per">
+                  <table>
+                    <tr>
+                      <td><span>60%</span></td>
+                      <td><span>40%</span></td>
+                    </tr>
+                    <tr>
+                      <td>PPP</td>
+                      <td>COM</td>
+                    </tr>
+                  </table>
+                </div>
+                <button>Message</button>
+              </div>
+
+
+
+
+            </div>
+            </div>
+            </div>
+          </div>
+        </section>
+        </section>
+      </div>
+
+    <body class="show-chatbot">
+        <div class="chatbot">
+
+            <header class="chatbotheader">
+                <img src="{{ asset('img/david-annebicque.jpeg') }}" alt="Local Logo" id="logo" height="100px" style="border-radius: 50%;">
+                <h2>David Annebicque</h2>
+                <span class="close-btn material-symbols-outlined">close</span>
+            </header>
+
+            <ul class="chatbox">
+                <li class="chat incoming">
+                    <span class="material-symbols-outlined"><img src="{{ asset('img/logo1.png') }}" alt="Local Logo" id="logo" class="logochat" height=20px margin-top="5px"> </span>
+                    <p>Bonjour 👋<br>Comment puis-je t'aider ? Précise bien ta demande afin que je puisse te répondre précisément lorsque je serais disponible !</p>
+                </li>
+            </ul>
+            <div class="chat-input">
+                <textarea placeholder="Entrez un message ..." spellcheck="false" required></textarea>
+                <span id="send-btn" class="material-symbols-rounded">send</span>
+            </div>
+        </div>
+
+        <script>
+           function addIncomingMessage(message) {
+        const chatbox = document.querySelector(".chatbox");
+        const newMessage = document.createElement("li");
+        newMessage.classList.add("chat", "incoming");
+    
+        // Remplacez le logo du robot par l'image locale
+        const logoImage = document.createElement("img");
+        logoImage.src = "logo2.svg";
+        logoImage.alt = "Logo";
+        newMessage.appendChild(logoImage);
+    
+        const messageParagraph = document.createElement("p");
+        messageParagraph.innerHTML = message;
+        newMessage.appendChild(messageParagraph);
+    
+        chatbox.appendChild(newMessage);
+    }
+        </script>
+    </body>
+</body>
+</html>

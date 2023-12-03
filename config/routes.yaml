@@ -1,0 +1,13 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+your_login:
+    path: /
+    controller: App\Controller\ConnexionController::index
+
+app_your:
+    path: /your
+    controller: App\Controller\YourController::index

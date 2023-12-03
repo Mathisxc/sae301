@@ -1,0 +1,96 @@
+{# Ajoutez le contenu du HTML ici #}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{{ asset('js/calendrier.js') }}" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <title>Calendrier</title>
+</head>
+<body>
+<script src="{{ asset('js/script1.js') }}"></script>
+<header>
+    <img src="{{ asset('svg/logo2.svg') }}" alt="cool">
+    <script src="{{ asset('js/script1.js') }}"></script>
+</header>
+<div class="container">
+    <div class="left">
+        <div class="calendar">
+            <div class="month">
+                <i class="fas fa-angle-left prev"></i>
+                <div class="date">Décembre 2023</div>
+                <i class="fas fa-angle-right next"></i>
+            </div>
+            <div class="weekdays">
+                <div>Lun</div>
+                <div>Mar</div>
+                <div>Mer</div>
+                <div>Jeu</div>
+                <div>Ven</div>
+                <div>Sam</div>
+                <div>Dim</div>
+            </div>
+            <div class="days"></div>
+            <div class="goto-today">
+                <div class="goto">
+                    <input type="text" placeholder="mm/yyyy" class="date-input" />
+                    <button class="goto-btn">Go</button>
+                </div>
+                <button class="today-btn">Aujourd'hui</button>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="today-date">
+            <div class="event-day">Jeu</div>
+            <div class="event-date">12 novembre 2023</div>
+        </div>
+        <div class="filter">
+            <label for="filterType">Filtrer par :</label>
+            <select id="filterType">
+                <option value="all">Tout</option>
+                <option value="title">Titre</option>
+                <option value="subject">Matière</option>
+                <option value="date">Date</option>
+            </select>
+            <input type="text" id="searchInput" class="search-event-input" placeholder="Rechercher..." />
+        </div>
+        <div class="events"></div>
+        <div class="add-event-wrapper">
+            <div class="add-event-header">
+                <div class="title">Ajouter un élément</div>
+                <i class="fas fa-times close"></i>
+            </div>
+            <div class="add-event-body">
+                <div class="add-event-input">
+                    <input type="text" placeholder="Nom de l'événement" class="event-name" />
+                </div>
+                <div class="add-event-input">
+                    <input
+                            type="text"
+                            placeholder="Heure de l'événement à partir de"
+                            class="event-time-from"
+                    />
+                </div>
+                <div class="add-event-input">
+                    <input
+                            type="text"
+                            placeholder="Matière"
+                            class="event-subject"
+                    />
+                </div>
+            </div>
+            <div class="add-event-footer">
+                <button class="add-event-btn">Ajouter un élément</button>
+            </div>
+        </div>
+    </div>
+    <button class="add-event">
+        <i class="fas fa-plus"></i>
+    </button>
+</div>
+</body>
+</html>

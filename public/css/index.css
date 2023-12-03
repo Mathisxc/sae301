@@ -1,0 +1,428 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  background: rgb(226, 226, 226);
+}
+.nav1{
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  width: 90px;
+  /* width: 280px; */
+  background: #fff;
+  overflow: hidden;
+  transition: 1s;
+  z-index: 2;
+}
+.nav1:hover{
+  width: 280px;
+  transition: 1s;
+}
+
+.menu3{
+    display: none;
+}
+
+.logo{
+  text-align: center;
+  display: flex;
+  margin: 10px 0 0 10px;
+  padding-bottom: 3rem;
+}
+
+
+.logo img{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.logo span{
+  font-weight: bold;
+  padding-left: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+a{
+  position: relative;
+  width: 280px;
+  font-size: 14px;
+  color: #373c4f;
+  display: table;
+  padding: 10px;
+}
+
+/* Styles pour l'icône de notification */
+.icon {
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  right: 40px;
+  z-index: 2; /* Assure que l'icône est au premier plan */
+}
+
+.icon span {
+  padding: 7px;
+  border-radius: 50%;
+  color: #fff;
+  vertical-align: top;
+  margin-left: -25px;
+}
+
+.icon img {
+  display: inline-block;
+  width: 40px;
+  margin-top: 20px;
+}
+
+.icon:hover {
+  opacity: 0.7;
+}
+
+/* Styles pour la boîte de notification */
+.notifi-box {
+  width: 300px;
+  height: 200px;
+  opacity: 0;
+  position: fixed;
+  top: 63px;
+  right: 35px;
+  transition: 1s opacity, 250ms height;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 1; /* Assure que la boîte est au-dessus du calendrier */
+}
+
+.notifi-box h2 {
+  font-size: 14px;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  color: #999;
+}
+
+.notifi-box h2 span {
+  color: #FF9800;
+}
+
+.notifi-item {
+  display: flex;
+  padding: 15px 5px;
+  cursor: pointer;
+}
+
+.notifi-item:hover {
+  background-color: #eee;
+}
+
+.notifi-item img {
+  display: block;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.notifi-item .text h4 {
+  color: #777;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.notifi-item .text p {
+  color: #aaa;
+  font-size: 12px;
+}
+
+/* Style pour la boîte active */
+.notifi-box.active {
+  opacity: 1;
+}
+
+
+
+
+
+
+.nav1 .fas{
+  position: relative;
+  width: 70px;
+  height: 40px;
+  top: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+.nav1-item{
+  position: relative;
+  top: 12px;
+  margin-left: 10px;
+}
+a:hover{
+  background: #eee;
+}
+a:hover i{
+  color: #f49719;
+  transition: 0.5s;
+}
+.logout{
+  position: absolute;
+  bottom: 0;
+}
+
+.container{
+  display: flex;
+}
+
+/* MAin Section */
+.main{
+  position: relative;
+  padding: 20px;
+  width: 100%;
+}
+.main-top{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.main-top i{
+  position: absolute;
+  right: 0;
+  margin: 10px 30px;
+  color: rgb(110, 109, 109);
+  cursor: pointer;
+}
+.main .users{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.users .card{
+  width: 22%;
+  margin: 10px;
+  background: #fff;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+.users .card img{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.users .card h4{
+  text-transform: uppercase;
+  font-size: 13px;
+}
+.users .card p{
+  font-size: 12px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+.users table{
+  margin:  auto;
+  text-align: center;
+}
+.users .per span{
+  padding: 5px;
+  border-radius: 10px;
+  background: #f49719;
+}
+.users td{
+  font-size: 14px;
+  padding: 3px;
+}
+.users .card button{
+  width: 100%;
+  margin-top: 8px;
+  padding: 7px;
+  cursor: pointer;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid #f49719;
+}
+.users .card button:hover{
+  background: #f49719;
+  color: #fff;
+  transition: 0.5s;
+}
+
+/*Attendance List serction  */
+.absences{
+  margin-top: 20px;
+  text-transform: capitalize;
+}
+.absences-liste{
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+.table{
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 15px;
+  min-width: 100%;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+  text-align-last: center;
+
+}
+table thead tr{
+  color: #fff;
+  background: #f49719;
+  text-align: left;
+  font-weight: bold;
+}
+.table th,
+.table td{
+  padding: 12px 15px;
+}
+.table tbody tr{
+  border-bottom: 1px solid #ddd;
+}
+.table tbody tr:nth-of-type(odd){
+  background: #f3f3f3;
+}
+.table tbody tr.active{
+  font-weight: bold;
+  color: #f49719;
+}
+.table tbody tr:last-of-type{
+  border-bottom: 2px solid #f49719;
+}
+.table button{
+  padding: 6px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.table .justifié{
+    background: green;
+    color: #fff;
+    transition: 0.5rem;
+    border: 1px solid green;
+  }
+  .table .injustifié{
+    background: #f49719;
+    color: #fff;
+    transition: 0.5rem;
+    border: 1px solid #f49719;
+  }
+
+.table button:hover{
+  background: #f49719;
+  color: #fff;
+  transition: 0.5rem;
+}
+
+
+/* Ajoutez ces règles de média queries pour les téléphones */
+@media only screen and (max-width: 600px) {
+
+    .nav1 {
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+      }
+
+  .nav1:hover {
+    width: 100%;
+  }
+
+  a {
+    width: 100%;
+    text-align-last: center;
+    display: contents;
+
+  }
+
+  .nav1 .fas {
+    width: 100%;
+    text-align: left;
+    margin-left: 10px;
+  }
+
+  .main {
+    padding: 10px;
+  }
+
+  .main .users{
+    margin-bottom: 80px;
+  }
+
+  .users .card {
+    width: 39%;
+  }
+
+  .absences{
+    margin-bottom: 80px;
+  }
+
+  .table th,
+  .table td {
+    padding: 8px 10px;
+  }
+
+  .attendance-list h1 {
+    font-size: 18px;
+  }
+
+  .table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 12px;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+    text-align-last: center;
+  }
+
+  .tablesupr{
+    display: none;
+  }
+
+  .users .card h4{
+    font-size: 13px;
+  }
+
+  .menu3 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    box-shadow: 1px -4px 1px  #f49719;
+    border-radius: 20px 20px 0 0;
+    background-color: #fbf9fd;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 9;
+  }
+
+.header3 {
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    height: 75px;
+    place-items: center;
+    font-size: larger;
+    justify-content: space-evenly;
+    font-weight: bold;
+}
+
+.navmobile{
+    display: contents;
+}
+
+}

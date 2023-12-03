@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="{{ asset('js/connexion.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <title>Connexion</title>
+</head>
+
+<body>
+
+<div class="container" id="container">
+    <div class="form-container sign-up">
+        <form>
+            <h1>Inscription</h1>
+
+            <input type="text" placeholder="Prénom">
+            <input type="text" placeholder="Nom">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Mot de passe">
+            <button>Inscription</button>
+        </form>
+    </div>
+    <div class="form-container sign-in">
+        <form method="post" action="{{ path('app_your') }}">
+            <h1>Connexion</h1>
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Mot de passe">
+            <a href="#">Mot de passe oublié</a>
+                <button type="submit">Se connecter</button>
+        </form>
+    </div>
+    <div class="toggle-container">
+        <div class="toggle">
+            <div class="toggle-panel toggle-left">
+                <img src="{{ asset('svg/logo.svg') }}" alt="cool">
+                <h1>Hey</h1>
+                <p>Facilitez-vous la vie avec ULTRANET</p>
+                <button class="hidden" id="login">CONNECTEZ-VOUS</button>
+            </div>
+            <div class="toggle-panel toggle-right">
+                <img src="{{ asset('svg/logo.svg') }}" alt="logo1">
+
+                <h1>Hey</h1>
+                <p>Facilitez-vous la vie avec ULTRANET</p>
+                <button class="hidden" id="register">INSCRIVEZ-VOUS</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+</html>
